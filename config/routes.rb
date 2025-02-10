@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   scope defaults: { format: :json } do
     root "products#index"
     resources :products
+    post "signup", to: "users#signup"
+    post "login", to: "users#login"
   end
+
+
 
 
   # get "/products", to: "products#index"
