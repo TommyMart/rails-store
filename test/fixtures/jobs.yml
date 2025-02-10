@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  car: one
+  total_time: 1.5
+  completed: false
+  cost: 9.99
+  parts: MyText
+
+two:
+  user: two
+  car: two
+  total_time: 1.5
+  completed: false
+  cost: 9.99
+  parts: MyText

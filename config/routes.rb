@@ -2,13 +2,27 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Expect json API endpoint requests
+  # Version 1 API routing
   scope defaults: { format: :json } do
-    root "products#index"
-    resources :products
-    post "signup", to: "users#signup"
-    post "login", to: "users#login"
-    patch "users", to: "users#update"
-    delete "users", to: "users#destroy"
+    namespace :api do
+      namespace :v1 do
+        root "products#index"
+        resources :products
+        resources :repairs
+        resources :cars
+        resources :owners, only: [ :index, :show, :update ] do
+          collection do
+            get "search"
+          end
+        end
+
+
+        post "signup", to: "users#signup"
+        post "login", to: "users#login"
+        patch "users", to: "users#update"
+        delete "users", to: "users#destroy"
+      end
+    end
   end
 
 

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  year: 1
+  speedo: 1
+  owner: one
+
+two:
+  make: MyString
+  year: 1
+  speedo: 1
+  owner: two
