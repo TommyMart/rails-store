@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :products
     post "signup", to: "users#signup"
     post "login", to: "users#login"
+    patch "users", to: "users#update"
+    delete "users", to: "users#destroy"
   end
 
 
